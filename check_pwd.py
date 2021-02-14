@@ -8,8 +8,16 @@ def check_pwd(password):
     if len(password) < 8:
         return False
 
-    # Check if passwords meets maximum length of 20 requirement
+    # Check if password meets maximum length of 20 requirement
     if len(password) > 20:
+        return False
+
+    # Check if password contains at least 1 lowercase letter
+    lowercase_check = False
+    for char in password:
+        if char.islower():
+            lowercase_check = True
+    if not lowercase_check:
         return False
 
     return True
