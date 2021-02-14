@@ -16,6 +16,11 @@ class MyTestCase(unittest.TestCase):
         # This test verifies that password over 20 characters long is rejected
         self.assertFalse(check_pwd("Abcdefghij0123456789!"))
 
+    def test3(self):
+        # This test verifies that password without at least 1 lowercase letter
+        # is rejected
+        self.assertFalse(check_pwd("ABCD123!"))
+
 
 if __name__ == '__main__':
     unittest.main()
