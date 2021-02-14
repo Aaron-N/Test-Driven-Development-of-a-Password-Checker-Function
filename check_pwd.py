@@ -28,4 +28,12 @@ def check_pwd(password):
     if not uppercase_check:
         return False
 
+    # Check if password contains at least 1 digit
+    digit_check = False
+    for char in password:
+        if char.isdigit():
+            digit_check = True
+    if not digit_check:
+        return False
+
     return True
