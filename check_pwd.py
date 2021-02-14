@@ -20,4 +20,12 @@ def check_pwd(password):
     if not lowercase_check:
         return False
 
+    # Check if password contains at least 1 uppercase letter
+    uppercase_check = False
+    for char in password:
+        if char.isupper():
+            uppercase_check = True
+    if not uppercase_check:
+        return False
+
     return True
