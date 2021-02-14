@@ -25,7 +25,12 @@ class MyTestCase(unittest.TestCase):
         # This test verifies that password without at least 1 uppercase letter
         # is rejected
         self.assertFalse(check_pwd("abcd123!"))
-        
+
+    def test5(self):
+        # This test verifies that password without at least one digit is
+        # rejected
+        self.assertFalse(check_pwd("Abcdefg!"))
+
 
 if __name__ == '__main__':
     unittest.main()
