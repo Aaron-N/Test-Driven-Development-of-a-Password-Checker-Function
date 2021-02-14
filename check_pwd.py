@@ -36,4 +36,14 @@ def check_pwd(password):
     if not digit_check:
         return False
 
+    # Check if password contains at least 1 of the permitted symbols
+    permitted_symbols = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(',
+                         ')', '_', '+', '-', '=']
+    permitted_symbol_check = False
+    for char in password:
+        if char in permitted_symbols:
+            permitted_symbol_check = True
+    if not permitted_symbol_check:
+        return False
+
     return True
