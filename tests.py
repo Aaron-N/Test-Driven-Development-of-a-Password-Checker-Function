@@ -36,6 +36,11 @@ class MyTestCase(unittest.TestCase):
         # permitted symbols is rejected
         self.assertFalse(check_pwd("Abcd1234"))
 
+    def test7(self):
+        # This test verifies that password with an un-permitted symbol in it
+        # is rejected
+        self.assertFalse("Abcd123>")
+
 
 if __name__ == '__main__':
     unittest.main()
