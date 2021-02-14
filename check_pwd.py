@@ -7,5 +7,9 @@ def check_pwd(password):
     # Check if password meets minimum length of 8 requirement
     if len(password) < 8:
         return False
-    
+
+    # Check if passwords meets maximum length of 20 requirement
+    if len(password) > 20:
+        return False
+
     return True
