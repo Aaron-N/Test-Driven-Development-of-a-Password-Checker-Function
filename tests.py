@@ -1,5 +1,5 @@
 # Author:  Aaron Nesbit
-# Date:    2/13/2021
+# Date:    2/15/2021
 # Course:  CS362-400-W2021
 # Program: Activity 2 - TDD
 
@@ -35,11 +35,6 @@ class MyTestCase(unittest.TestCase):
         # This test verifies that password without at least one of the
         # permitted symbols is rejected
         self.assertFalse(check_pwd("Abcd1234"))
-
-    def test7(self):
-        # This test verifies that password with an un-permitted symbol in it
-        # is rejected
-        self.assertFalse("Abcd123>")
 
 
 if __name__ == '__main__':
