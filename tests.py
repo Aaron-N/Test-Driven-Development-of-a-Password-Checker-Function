@@ -1,7 +1,5 @@
 # Author:  Aaron Nesbit
 # Date:    2/15/2021
-# Course:  CS362-400-W2021
-# Program: Activity 2 - TDD
 
 import unittest
 from check_pwd import check_pwd
